@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces{
+    position: fixed;
+    z-index: 5;
+    font-size: 50px;
+    background-color: #48e;
+}
+a{
+    color: #fff;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    background-color: aqua;
+    margin: auto;
+    padding: 20px 50px;
+}
+
+/*filtros y transformacion*/
+
+.img1{
+    filter: blur(10px);
+    transform: scale(1.1) skew(20deg);
+}
+
+.img2{
+    filter: brightness(10);
+    transform: translateX(10px) translateY(20px);
+}
+
+.img3{
+    filter: contrast(100);
+    transform: rotate(90deg);
+}
+
+.img4{
+    filter: saturate(50);
+    transform: rotateY(80deg) rotateX(45deg) rotateZ(90deg);
+}
+
+.img5{
+    filter: grayscale(0.4);
+}
+
+.img6{
+    filter: invert(0.7) blur(4px);
+}
+
+/*variables y clamp*/
+.box-xd{
+    --color-texto:#fa2;
+    background-color: #48e;
+    width: clamp(400px,100%,900px);/*adaptar width en vez de usar max-width y min-width*/
+    color: #fff;
+    font-size: 30px;
+    padding: 20px;
+}
+
+h1{
+    font-size: 2.4em;
+    color: var(--color-texto);
+}
+
+/*definiendo un valor*/
+@property --color-parrafo{
+    syntax: "<color>";
+    inherit: false;
+    initial-value: #48e;
+}
+
+p{
+    color: var(--color-parrafo);
+}
+
+/*propiedades del scroll*/
+
+*{
+    scroll-behavior: smooth;/*comportamiento*/
+    scrollbar-color: #fd0000 #041458;/*color*/
+    scrollbar-width: thin;
+}
+
+/*initial letter*/
+
+p::first-letter{
+    initial-letter: 2 1;
+    color: #fd0000;
+}
+
+/*funcion color-mix*/
+
+.div-main{
+    height: 100dvh;
+    background-color: #000;
+}
+
+.div{
+    width: 200px;
+    height: 200px;
+    background-color: color-mix(in srgb, #48e 50%, #fff 100%);
+}
+
+/*clip-path*/
+
+.clip-path{
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 5% 12%, 79% 10%, 81% 48%, 8% 94%, 25% 100%, 100% 100%, 100% 0%);
+}

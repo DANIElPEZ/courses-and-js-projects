@@ -1,0 +1,204 @@
+*{
+    --bg-color: color-mix(in srgb, #1b2b43 95%, #fff);
+    --sidebar-color: #fff;
+    --dark-color: rgb(37, 154, 209);
+    --text-color: #202020;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    color: var(--dark-color);
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+/*sidebar styles*/
+
+.sidebar{
+    background-color: var(--sidebar-color);
+    position: fixed;
+    height: 100dvh;
+    width: clamp(220px,20vw, 300px);
+    font-size: clamp(1rem, 2.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 30px 6px;
+}
+
+.sidebar__nav{
+    display: flex;
+    flex: 1;
+}
+
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar__item{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding-right: 6px;
+    border-radius: 36px 0 0 36px;
+    position: relative;
+}
+
+.sidebar__item:hover{
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+    cursor: pointer;
+}
+
+.sidebar__item span:hover{
+    color: var(--sidebar-color);
+}
+
+.sidebar__item a{
+    color: inherit;
+}
+
+.sidebar__item span{
+    padding: 12px;
+    font-size: 2rem;
+}
+
+.sidebar__item::before,
+.sidebar__item::after{
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar__item:hover::before{
+    top: -18px;
+    box-shadow: 4px 4px 0 4px var(--bg-color);
+    border-bottom-right-radius: 25px;
+}
+
+.sidebar__item:hover::after{
+    bottom: -18px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
+    border-top-right-radius: 25px;
+}
+
+/*sidebar head styles*/
+
+.sidebar__picture{
+    margin-left: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.sidebar__picture img{
+    width: clamp(4rem,75%,20rem);
+    margin: auto;
+    filter: hue-rotate(-20deg);
+    border-radius: 50%;
+}
+
+/*sidebar bottom styles*/
+
+.sidebar__profile img{
+    border-radius: 50%;
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+.sidebar__profile .profile-option{
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/*sidebar style*/
+
+input[type="checkbox"],
+.sidebar__form .open-button{
+    display: none;
+}
+
+.sidebar__form{
+    position: absolute;
+    z-index: 60;
+    right: -1rem;
+}
+
+.sidebar label{
+    position: relative;
+    color: var(--sidebar-color);
+    background-color: var(--bg-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.sidebar label::before,
+.sidebar label::after{
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    width: 13px;
+    height: 25px;
+}
+
+.sidebar label::before{
+    top: -25px;
+    left: 20px;
+    box-shadow: 4px 4px 0 4px var(--bg-color);
+    border-bottom-right-radius: 25px;
+}
+
+.sidebar label::after{
+    bottom: -25px;
+    left: 20px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
+    border-top-right-radius: 25px;
+}
+
+/*sidebar animation*/
+input[type="checkbox"]:checked ~label{
+    color: var(--bg-color);
+    background-color: var(--sidebar-color);
+}
+input[type="checkbox"]:checked ~label::before,
+input[type="checkbox"]:checked ~label::after{
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked){
+    width: fit-content;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) picture{
+    width: fit-content;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img,
+.sidebar:has(input[type="checkbox"]:checked) a{
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .profile-option{
+    display: none;
+}
+/*buton animation*/
+.sidebar:has(input[type="checkbox"]:checked) .close-button{
+    display: none;
+}
+.sidebar:has(input[type="checkbox"]:checked) .open-button{
+    display: block;
+}

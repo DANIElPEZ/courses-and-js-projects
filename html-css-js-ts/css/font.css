@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "montserrat-alt-md";
+    src: url("fonts/MontserratAlternates-Medium.ttf") format("truetype");
+    font-weight: 300;
+} /*siempre asi*/
+
+@font-face {
+    font-family: "montserrat-alt-bold";
+    src: url("fonts/MontserratAlternates-Bold.ttf") format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "montserrat-alt-bold";
+    src: url("fonts/MontserratAlternates-SemiBold.ttf") format("truetype");
+    font-weight: 400;
+}

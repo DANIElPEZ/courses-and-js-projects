@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh;
+            width: 100dvw;
+            background-color: #354;
+        }
+
+        #nombre,#clave,#submit{
+            padding: 2px;
+            margin: 4px;
+        }
+
+        #nombre,#clave{
+            background-color: rgb(106, 137, 236);
+            border: none;
+        }
+
+        #send{
+            width: 120px;
+            background-color: rgb(123, 207, 141);
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <input id="nombre" type="text">
+        <input id="clave" type="text">
+        <button id="send">enviar</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>

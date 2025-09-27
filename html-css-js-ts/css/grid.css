@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.gr-item{
+    background-color: #0f0;
+    border: 3px solid #ff0;
+    color: #fff;
+    font-size: 30px;
+}
+
+.gr-item1{
+    background-color: #0f0;
+    border: 3px solid #ff0;
+    color: #fff;
+    font-size: 30px;
+}
+
+.grid-item,.grid-item1{
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    font-size:30px;
+    color: #fff;
+}
+
+header, nav, main, aside, footer{
+    border: 4px solid #982;
+}
+
+/*basico de grid*/
+
+.grid{
+    display: grid;
+    grid-template-columns: 60px 100px 200px;/*numero de columnas*/
+    grid-template-rows: 80px 200px;/*numero de filas*/
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: minmax(100px,300px) auto 1fr;
+    grid-template-rows: repeat(4,1fr);
+    height: 500px;
+}
+
+
+/*grid imolicito explicito*/
+.implicito{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows:  repeat(3,150px);
+    grid-auto-rows: 150px;/*cuando se generan mas elementos automaticamente se ajustaran a este tamaño (por defecto los elementos se posicionaran en filas y con "grid-auto-flow" se define esa propiedad en la que va a posicionar los elementos)*/
+    grid-auto-flow: column;/*aca cuando se genera elementos nuevos se posicionaran en columnas*/
+    grid-auto-columns: 150px;
+    gap: 5px 20px;
+}
+
+/*dinamic y responsive*/
+.dinamic{
+    margin-top: 30px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));/*autofit redimenziona y autofill crea nuevas coumnas*/
+    grid-auto-rows: 100px;
+}
+
+/*row y column*/
+.gr-item1:first-child{
+    background-color: aquamarine;
+    grid-column-start: 1;
+    grid-column-end: span 2;/*esto define cuantas columnas va a ocupar, se define desde donde inicia y finaliza*/
+    grid-row: 1/span 2;
+}
+
+/*grid-flow:dense;*/
+.gr-item1:nth-child(10){
+    background-color: rgb(11, 66, 66);
+    grid-column: span 4;
+}
+
+.dinamic{
+    grid-auto-flow: dense;/*hace relleno*/
+}
+
+/*grid areas*/
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.gr-area{
+    flex-grow: 1;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    min-height: 100vh;
+    max-width: 900px;
+    grid-template-columns: minmax(200px,1fr) minmax(300px,1fr) minmax(200px,1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+    "nav main aside"; /*creando las areas del grid*/
+}
+
+header{
+    background-color: #48e;
+}
+
+nav{
+    grid-area: nav;/*asignando las areas a los elementos*/
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+nav,aside{
+    top: 0;
+    height: 100vh;
+    position: sticky;
+}
+
+@media screen and (max-width:500px){
+    .gr-area{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav"
+        "main";
+    }
+    nav{
+        position: static;
+    }
+    aside{
+        display: none;
+    }
+    
+}
+
+/*grid alignament*/
+.gr-al-it{
+    background-color: #48e;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid#0f0;
+}
+
+.gr-al-it:hover{
+    opacity: 0.8;
+}
+
+.gr-al{
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-rows: repeat(3,150px);
+    grid-template-columns: repeat(3,150px);
+    justify-items: self-end;/*centrado de los hijos en eje x*/
+    justify-content: center;/*centrado de celdas en eje x*/
+    border: 6px solid;
+    align-items: center; /*centrado de los hijos en eje y*/
+    align-content: center;/*centrado de celdas en eje y*/
+}
+
+.gr-al-it:last-child{
+    direction: rtl;
+}
+.gr-al-it:first-child{
+    justify-self: left;/*autojustifica eje x*/
+    align-self: end;/*autojustifica eje y*/
+}
+
+/*subgrid*/
+.sub-grid-it{
+    background-color: #48e;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.sub-grid{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+}
+
+.sub-grid-it:first-child{
+    display: grid;
+    background-color: #e66;
+    grid-area: 2/2/span 2/span 2;
+    grid-template-columns: subgrid;/*la subgrilla se redimensiona y la grilla principal se ajusta al tamaño de la subgrilla*/
+    grid-template-rows: subgrid;
+    gap: 5px;
+}
+
+.sub-grid-item{
+    display: flex;
+    background-color: #4a6;
+    border-radius: 16px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-grid-item:first-child{
+    background-color: #90f;
+    order: 2;
+    width: 300px;
+}

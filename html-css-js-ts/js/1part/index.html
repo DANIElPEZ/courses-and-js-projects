@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <style>
+        div{
+            width: 30px;
+            height: 30px;
+            cursor: wait;
+            border-radius: 50%;
+            border: 5px solid #0005;
+            border-left-color: #00f;
+            animation: loading 1s  infinite;
+        }
+
+        @keyframes loading {
+            0%{
+                rotate: 0deg;
+            }
+            100%{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="load"></div>
+</body>
+</html>

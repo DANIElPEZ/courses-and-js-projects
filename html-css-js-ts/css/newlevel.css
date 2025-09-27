@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to top,#999,#fff);
+}
+
+.title{
+    text-align: center;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 27px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.form{
+    background-color: #ededed;
+    padding: 10px 20px;
+    margin: auto;
+    max-width: 500px;
+    box-shadow: 0 0 35px #0007;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+}
+
+.form-input, .form-area, .puesto{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 12px;
+    margin: 20px 0;
+    margin-top: 0;
+    border: none;
+    border-left: 2px solid #999;
+    box-shadow: 0 0 15px #0006;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.form-area{
+    resize: vertical;
+    min-height: 70px;
+    max-height: 200px;
+    font-family: sans-serif;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    /*form-sizing:content; no disponible*/
+}
+
+label{
+    font-size: 0.9em;
+    line-height: 2;
+}
+
+.terms{
+    width: auto;
+}
+
+option{
+    background-color: #e6e6e6;
+    color: #191919;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+fieldset{
+    margin: 20px 0;
+    border: 3px solid #999;
+    border-radius: 5px;
+}
+
+legend{
+    padding: 0 6px;
+    border: 2px solid #999;
+    border-width: 0 2px;
+}
+
+summary{
+    font-size: 16px;
+    color: #191919;
+    margin: 20px 0 10px 0;
+}
+
+li{
+    font-size: 14px;
+    color: #191919;
+    margin: 10px 0;
+}
+
+a{
+    text-decoration: none;
+    color:#3a3b3b;
+    font-family: montserrat-alt-bold;
+    font-weight: 900;
+}

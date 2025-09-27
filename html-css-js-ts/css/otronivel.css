@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    background-color: #ff7;
+}
+/*position relative*/
+.box{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    position: relative; /*mover caja visualmente y ocupa espacio en la posicion original*/
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+    top:-10px;
+    z-index: 1;
+}
+
+.blue{
+    background-color: blue;
+    top: -20px;
+    z-index: -1;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+/*position absolute*/
+.container__absolute{
+    border: 5px solid #000;
+    width: 500px;
+    position: relative;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+}
+
+.red1{
+    background-color: red;
+}
+
+.green1{
+    background-color: green;
+    position: absolute; /*no ocupa su posicion original, toma como referencia la etiqueta html*/
+    right: 0;
+
+}
+
+.blue1{
+    background-color: blue;
+}
+
+/*ventana modal*/
+.modal{
+    background-color: #0007;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal__content{
+    background-color: #fff;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.modal__title{
+    margin-top: 10px;
+}
+
+.modal__button{
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+/*position fixed*/
+.anuncio{
+    position: fixed;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    top: 0;
+    z-index: 2;
+    right: 0;
+}
+
+/*position sticky*/
+.nav__sticky{
+    position: sticky;
+    top: 0;
+    background-color: aquamarine;
+}

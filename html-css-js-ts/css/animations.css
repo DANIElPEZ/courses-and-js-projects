@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    border: none;
+}
+
+/*load bar*/
+
+.box,.barra{
+    box-sizing: border-box;
+}
+
+.box{
+    margin: 20px;
+    background-color: #ddd;
+    padding: 6px;
+    border: 3px solid #48e;
+    border-radius: 38px;
+    cursor: wait;
+}
+
+.barra{
+    border-radius: 30px;
+    padding: 7px;
+    width: 10%;
+    background-color: #48e;
+/*propiedades animacion*/
+    animation-delay: -1s;/*cuando comienza*/
+    animation-duration: 1s;/*duracion*/
+    animation-name: llenar-barra;/*identificador*/
+    animation-fill-mode: both;/*modo de llenado*/
+    animation-timing-function: linear;/*bezier function*/
+    animation-iteration-count: infinite;/*cuantas veces de repeticion*/
+    animation-direction: alternate;
+}
+
+.barra:hover{
+    animation-play-state: paused;
+}
+
+@keyframes llenar-barra {
+
+    from{
+        width: 0%;
+        background-color: #131;
+    }
+
+    to{
+        width: 100%;
+        background-color: #3a3;
+    }
+
+}
+
+/*buttons*/
+.wrapper{
+    width: 100%;
+    height: 200vh;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 40px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    letter-spacing: 1.3px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*button 1*/
+
+.btn-1{
+    border: 1px solid #48e;
+    overflow: hidden;
+}
+
+.btn-1::before{
+    content: '';
+    background-color: #48e;
+    height: 200%;
+    width: 200%;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    top: 100%;
+    left: 30%;
+    transition: left 0.6s, top 0.6s;
+}
+
+.btn-1:hover::before{
+    top: -40%;
+    left: -40%;
+}
+
+/*button 1*/
+
+.btn-2{
+    border: 1px solid#fff3;
+    color: #fff3;
+    transition: 0.6s;
+}
+
+.btn-2:hover{
+    animation: smooth-btn 1s infinite alternate backwards;
+}
+
+@keyframes smooth-btn{
+
+    0%{
+        border: 1px solid#fff3;
+        color: #fff3;
+        text-shadow: 0;
+        box-shadow: 0;
+    }
+
+    25%{
+        border-color: rgb(159, 197, 255);
+        color: #48e;
+        box-shadow: 0 0 7px #48e2, 0 0 16px #48e6;
+        text-shadow: 0 0 9px #48ee,0 0 3px rgba(171, 205, 255, 0.438);
+    }
+
+    30%{
+        border: 1px solid#fff3;
+        color: #fff3;
+        text-shadow: 0;
+        box-shadow: 0;
+    }
+
+    35%{
+        border-color: rgb(159, 197, 255);
+        color: #48e;
+        box-shadow: 0 0 7px #48e2, 0 0 16px #48e6;
+        text-shadow: 0 0 9px #48ee,0 0 3px rgba(171, 205, 255, 0.438);
+    }
+
+    50%{
+        border: 1px solid#fff3;
+        color: #fff3;
+        text-shadow: 0;
+        box-shadow: 0;
+    }
+
+    100%{
+        border-color: rgb(159, 197, 255);
+        color: #48e;
+        box-shadow: 0 0 7px #48e2, 0 0 16px #48e6;
+        text-shadow: 0 0 9px #48ee,0 0 3px rgba(171, 205, 255, 0.438);
+    }
+
+}
+
+/*textwritter*/
+.text-container{
+    max-width: 100%;
+}
+
+.text-writer{
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 30px;
+    animation: write 2s steps(7);
+    overflow: hidden;
+    position: relative;
+}
+
+.text-writer::before{
+    content: '';
+    right: 0;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    animation: smooth-cursor 1s infinite;
+}
+
+.text-writer::selection{
+    background-color: transparent;
+}
+
+@keyframes smooth-cursor {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes write {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/*scroll animation*/
+.scroll,.scroll-loader{
+    box-sizing: border-box;
+}
+
+.scroll{
+    margin: 20px;
+    background-color: #ddd;
+    padding: 6px;
+    border: 3px solid #48e;
+    border-radius: 38px;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+}
+
+.scroll-loader{
+    border-radius: 30px;
+    padding: 7px;
+    width: 1%;
+    background-color: #48e;
+    animation: llenar-barra linear both;
+    animation-timeline: scroll();
+}
+
+/*viewport animation*/
+.crecedor{
+    height: 150vh;
+}
+
+.box-crecedor{
+    padding: 4px;
+    background-color: #48e;
+    animation: llenar-barra;
+    view-timeline: --caja block;/*animacion unica para este elemnto*/
+    animation-timeline: --caja;
+    animation-range: cover 40%, contain 80%;/*empieza al 40% y termina al 80%*/
+    animation-fill-mode: both;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Document</title>
+    <link rel="icon" href="../assets/favicon.ico" type="image/ico">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Esta pagina es mamadora de gallitos xd">
+    <meta name="keywords" content="fruta,verdura,pito,rancio,papa">
+    <meta name="author" content="Juan Ernesto">
+    <meta name="robots" content="follow">
+
+    <meta name="og:title" content="se muestra">
+    <meta name="og:description" content="cuando">
+    <meta name="og:title" content="se comparte">
+
+    <link rel="stylesheet" href="../css/newlevel.css">
+</head>
+<body>
+    <form class="form">
+        <a class="title" href="../index.html">Formulario de contacto</a>
+        <!--fieldset y legend-->
+        <fieldset>
+            <legend>Informacion Basica</legend>
+            <div>
+                <Label>
+                    Nombre Completo
+                    <input class="form-input" placeholder="Juan Perez" type="text">
+                </Label>
+            </div>
+            <div>
+                <Label>
+                    Email
+                    <input class="form-input" placeholder="Juan@gmail.com" type="email">
+                </Label>
+            </div>
+        </fieldset>
+        <!--Select y option-->
+        <fieldset>
+            <legend>Informacion de postulación</legend>
+            <div>
+                <Label>
+                    Puesto
+                    <select class="puesto" aria-label="puesto a postular">
+                        <option value="js1">Gestor Proyectos</option>
+                        <option value="js2">Programador</option>
+                        <option value="js3">Vigilante</option>
+                        <option value="js4">Aseador</option>
+                    </select>
+                </Label>
+            </div>
+            <!--Datalist y option-->
+            <div>
+                <Label>
+                    Quien nos recomendo
+                    <input class="form-input" type="text" list="referente">
+                        <datalist id="referente">
+                            <option value="js1">Tu empresa</option>
+                            <option value="js2">Publicidad</option>
+                            <option value="js3">Visita de a la empresa</option>
+                            <option value="js4">Web</option>
+                        </datalist>
+                </Label>
+            </div>
+        </fieldset>
+        <!--textarea-->
+        <div>
+            <Label>
+                Observaciones
+                <textarea rows="5" placeholder="Estoy estudiando php, ..." class="form-area"></textarea>
+            </Label>
+        </div>
+        <div>
+            <label>
+                Acepto los <a href="terms.html" target="_blank">terminos y condiciones</a>
+                <input class="terms" type="checkbox">
+            </label>
+        </div>
+        <!--details y summary-->
+        <div>
+            <details>
+                <summary>Horario</summary>
+                <ol>
+                    <li>Lunes - Viernes de 7:00 A.M. A 12:00 P.M. / 2:00 P.M. A 5:00 P.M.</li>
+                    <li>Sabado de 9:00 A.M. A 12:00 P.M. / 2:00 P.M. A 3:30 P.M.</li>
+                </ol>
+            </details>
+        </div>
+    </form>
+</body>
+</html>

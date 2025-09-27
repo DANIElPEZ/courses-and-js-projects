@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .btn{
+            width: 200px;
+            height: 40px;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        #load{
+            display: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 5px solid #0005;
+            border-left-color: #00f;
+            z-index: 10;
+            animation: load 0.34s infinite linear;
+        }
+
+        @keyframes load {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>defer para interactuar con el dom y async que son idenpendientes del dom</h1>
+    
+    <button class="btn" id="btn">
+        IR
+        <div id="load"></div>
+    </button>
+
+    <script defer src="index.js"></script>
+</body>
+</html>

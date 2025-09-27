@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-item{
+    border: 3px solid #a1d;
+    padding: 30px;
+    background-color: aquamarine;
+    flex-grow: 1;
+}
+
+@media screen and (max-width:500px) {
+    .texto{
+        font-size: 20px;
+        background-color: #0006;
+        color: #fff;
+    }
+    .flex{
+        flex-direction: column;
+    }
+}

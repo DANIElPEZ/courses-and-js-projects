@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-----------------header section------------------------>
+    <header class="header">
+
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+
+        <!--role para accesibilidad-->
+        <label class="header__open-nav-button" for="open-menu" role="button">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <div class="header__logo">
+            <img src="assets/favicon.ico" alt="" class="header__logo">
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#about">About</a></li>
+                <li class="header__nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="header__nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!---------------main section---------------------->
+    <main class="profile" id="about">
+
+        <div class="profile__wrapper">
+
+            <div class="profile__img-container">
+                <img class="profile__img" src="assets/DNV.png">
+            </div>
+
+            <div class="profile__data-container">
+
+                <div class="profile__data">
+
+                    <div class="profile__description">
+                        <h1>Some title dddd xd</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, culpa nisi excepturi repellat necessitatibus velit! Ipsum eum dolorum delectus animi quam, sit, molestiae et commodi aut nam eveniet est voluptatum.</p>
+                    </div>
+
+                    <div class="profile__skills-container">
+
+                        <h2 class="skills">SKILLS</h2>
+
+                        <ul>
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--80">80%</div>
+                                </div>
+                                <span class="profile__skill-name">HTML</span>
+                            </li>
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--60">60%</div>
+                                </div>
+                                <span class="profile__skill-name">CSS</span>
+                            </li>
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--70">70%</div>
+                                </div>
+                                <span class="profile__skill-name">KOTLIN</span>
+                            </li>
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--90">90%</div>
+                                </div>
+                                <span class="profile__skill-name">PYTHON</span>
+                            </li>
+
+                            <li class="profile__skill">
+                                <div class="load-bar">
+                                    <div class="load-bar__bar bar--95">95%</div>
+                                </div>
+                                <span class="profile__skill-name">SQL</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+<!----------------------portfolio section------------------------>
+
+    <section class="portfolio" id="portfolio">
+
+        <h2 class="portfolio__title">PORTFOLIO SECTION</h2>
+
+        <div class="portfolio__project-container">
+
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+
+            <div class="portfolio__project">
+                <h2 class="portfolio__project-name">PROJECT</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------contact section---------------->
+
+    <section class="form" id="contact">
+        
+        <h2 class="form__title">CONTACT</h2>
+
+        <form class="form__form">
+
+            <div class="form__input">
+                <lable>
+                    Name
+                    <input type="text" placeholder="Pepito Perez">
+                </lable>
+            </div>
+
+            <div class="form__input">
+                <lable>
+                    Last Name
+                    <input type="text" placeholder="Pepito Perez">
+                </lable>
+            </div>
+
+            <div class="form__input">
+                <lable>
+                    E-mail
+                    <input type="email" placeholder="pepito.perez@gmail.com">
+                </lable>
+            </div>
+
+            <div class="form__input">
+                <lable>
+                    Message
+                    <textarea columns="8" placeholder="Write your message"></textarea>
+                </lable>
+            </div>
+
+            <div class="form__input">
+                <input type="submit" class="submit">
+            </div>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <strong>DNV</strong> - &#169Copyright
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" ></script>
+</body>
+</html>

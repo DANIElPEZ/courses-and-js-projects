@@ -1,0 +1,158 @@
+body{
+    color:rgb(85, 114, 143);
+}
+
+img[src$="png"]{/*selecciona images con .png*/
+    width: 100%;
+}
+
+ul li strong{/*dexcendiente*/
+    color: #f00;
+}
+
+ul> strong{/*hijo directo*/
+    color: #0f0;
+}
+
+h1+p{/*adyacente*/
+    color: #ff0;
+}
+
+h2~p{/*hermanos generales*/
+    color: #f0f;
+}
+
+h2{
+    color: #00f;/*estilo de la cascada*/
+}
+
+.title{
+    color: #123 !important;;
+}
+
+#title{
+    color:#84f;
+}
+
+/*pseudoclases*/
+
+/*cuando pasa el mouse*/
+h1:hover{
+    color: #f00;
+    background-color: #000;
+}
+
+/*cunado clickea el elemento*/
+h1:active{
+    background-color: #00f;
+}
+
+/*seleccion al primer li*/
+li:first-child{
+    color: #000;
+}
+
+/*seleccion al n li*/
+li:nth-child(2n){
+    color: #ac0;
+}
+
+/*seleccion al ultimo li*/
+li:last-child{
+    color: cyan;
+}
+
+/*links no visitados*/
+a:link{
+    color: #f00;
+}
+
+/*links visitados*/
+a:visited{
+    color: #84f;
+}
+
+/*entrada valida*/
+label:has(input:valid){
+    color: #00f;
+}
+
+/*entrada invalida*/
+label:has(input:invalid){
+    color: #123;
+}
+
+/*pseudoelementos*/
+
+/*modificar la primer letra*/
+h1::first-letter{
+    color: #000;
+    font-size: 80px;
+}
+
+/*modificar la primer linea*/
+p::first-line{
+    color: #0f0;
+}
+
+/*seleccion para copiar texto*/
+p::selection{
+    color:#123;
+    background-color: #ac0;
+}
+
+/*modificar placeholder*/
+input::placeholder{
+    font-size: 20px;
+    color: #000;
+}
+
+/*cambiar marcador del li "o"*/
+li::marker{
+    color: #f0f;
+}
+
+/*before after*/
+h2::before{
+    color: #f00;
+    content: "deja de ser furro ";
+}
+
+h2::after{
+    content: " escribe";
+    color: #f00;
+}
+
+/*display*/
+.display{
+    background-color: #999;
+    padding: 10px;
+}
+
+.enlace{
+    color: #fff;
+    background-color: #333;
+}
+
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+}
+
+.nav{
+    background-color: #48e;
+}
+
+nav .nav__item{
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+
+.nav__item:hover{
+    background-color: #6af;
+}

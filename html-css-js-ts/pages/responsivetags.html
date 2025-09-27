@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/responsivetags.css">
+</head>
+<body>
+    <div class="bloque">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ducimus dolore, earum quia ratione ipsum eius autem neque, cum vel temporibus nostrum soluta consequuntur ab commodi voluptas blanditiis. Perferendis, minima.
+    </div>
+    <img class="img" src="../assets/v1.jpeg" alt="">
+    <div class="video">
+        <video src="../assets/video.mp4" controls></video>
+    </div>
+    <img class="img-dimentions" 
+    src="../assets/imagesresize/sql3.png"
+
+    srcset="
+    ../assets/imagesresize/sql3.png 200w, 
+    ../assets/imagesresize/sql2.png 400w,
+    ../assets/imagesresize/sql1.png 600w"
+
+    sizes="
+    (max-width: 300px) 200px,
+    (max-width: 400px) 400px, 600px" 
+    ><!--
+    en sizes 
+    """
+    if pantalla(max-width:200)<200px:
+        width-imagen=200px
+    elif pantalla(max-width:400)<400px:
+        width-imagen=400px
+    else:
+        width-imagen=600px
+    """
+    -->
+    <picture>
+        <source media="(max-width: 300px)" srcset="../assets/imagesresize/sql2.png">
+        <source media="(max-width: 500px)" srcset="../assets/imagesresize/sql1.png">
+        <img src="../assets/imagesresize/sql3.png">
+    </picture>
+</body>
+</html>
