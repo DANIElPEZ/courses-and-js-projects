@@ -1,0 +1,31 @@
+imagen:
+     listar imagenes: docker images
+     listar imagenes filtro: docker images --filter=reference='*.<version>'
+     construir imagen: docker build -t <name>:<version> .
+     modificar tag: docker image tag <original name>:<original version> <new name>:<new version>
+     # -a todas las imagenes
+     eliminar todas imagen: docker image prune -a
+     guardar imagen comprimida: docker save <name> > file.rar
+     cargar imagen comprimida: docker load --input file.rar
+
+contenedores:
+     listar contenedores activos: docker ps
+     listar contenedores: docker ps -a
+     # -it, modo interactivo, ejemplo ver logs de la app, --rm remover contenedor, -d correr en 2 plano, -p puerto puertoExterno:puertoDocker, -v volumen ./directorio actual:/directorio contenedor
+     correr un contenedor: docker run -it --rm -d -p 8080:80 -v ./<current directory>:/<container directory> --name <name> <name image>
+     detener contenedor: docker stop <id>
+     eliminar contenedor: docker container prune
+
+redes:
+     listar redes: docker network ls
+     crear red: docker network create <name>
+
+hub:
+     publicar imagen: docker push <user name>/<image name>:<version>
+
+compose:
+     construir el proyecto: docker compose build
+     correr el proyecto: docker compose up
+
+cache:
+     borrar cache de docker: docker builder prune
