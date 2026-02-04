@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pain js dnv</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6288821932043902"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="head">
+        <img src="./assets/icon.png" alt="paint" />
+        <h1 class="title">Paint.js</h1>
+      </div>
+      <div class="board">
+        <aside class="aside">
+            <nav class="nav">
+              <button id="draw-btn" title="Pincel">
+                <img id="img" src="./assets/drawbutton.png" />
+              </button>
+              <button id="erase-btn" title="Borrar">
+                <img id="img" src="./assets/erasebutton.png" />
+              </button>
+              <button id="rectangle-btn" title="Rectángulo">
+                <img id="img" src="./assets/rectanglebutton.png" />
+              </button>
+              <button id="picker-btn" title="Capturar Color">
+                <img id="img" src="./assets/pickerbutton.png" />
+              </button>
+              <button id="clear-btn" title="Limpiar dibujo">
+                <img id="img" class="clear-btn" src="./assets/trashbutton.png" />
+              </button>
+              <button id="save-btn" title="Guardar dibujo">
+                <img id="img" src="./assets/savebutton.png" />
+              </button>
+            </nav>
+            <input type="color" id="color-picker" class="picker" value="#000000" />
+        </aside>
+        <canvas class="canvas"></canvas>
+      </div>
+    </div>
+  </body>
+</html>

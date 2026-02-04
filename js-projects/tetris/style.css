@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-color: rgb(25, 48, 83);
+    color: #fff;
+    font: 1.4em sans-serif;
+}
+
+#canvas{
+    background-color: #333;
+    border: #ddd solid 3px;
+}
+
+.begin{
+    position: absolute;
+    padding: 6px 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: #017b80;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s transform ease;
+}
+
+.begin:hover{
+    transform: scale(1.3);
+}
